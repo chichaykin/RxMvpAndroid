@@ -1,10 +1,7 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 26
 
     defaultConfig {
         applicationId "com.onemanparty.rxmvpandroid"
@@ -32,18 +29,20 @@ android {
 
 dependencies {
     compile (name: 'dialogwrapper', ext: 'aar')
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:design:23.3.0'
-    compile 'com.android.support:support-v4:23.3.0'
-    compile 'com.android.support:support-annotations:23.3.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.1.0'
 
-    compile 'com.jakewharton:butterknife:7.0.1'
+    //compile 'com.android.support:support-v4:23.3.0'
+    //compile 'com.android.support:support-annotations:23.3.0'
+
+
 
     compile 'com.google.code.gson:gson:2.6.2'
 
     // Dagger 2
-    compile 'com.google.dagger:dagger:2.1'
-    apt 'com.google.dagger:dagger-compiler:2.1'
+    compile 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
     // Retrofit
@@ -58,6 +57,9 @@ dependencies {
 
     // Stream API
     compile 'com.annimon:stream:1.0.2'
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //Unit test
     testCompile 'junit:junit:4.12'

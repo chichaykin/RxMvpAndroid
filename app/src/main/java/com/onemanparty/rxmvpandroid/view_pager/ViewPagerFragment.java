@@ -4,16 +4,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import butterknife.BindView;
 import com.onemanparty.rxmvpandroid.R;
 import com.onemanparty.rxmvpandroid.base.ui.AbsButterFragment;
 
-import butterknife.Bind;
 
 public class ViewPagerFragment extends AbsButterFragment {
 
     private static final String KEY_NUMBER = "KEY_NUMBER";
 
-    @Bind(R.id.view_pager_text)
+    @BindView(R.id.view_pager_text)
     TextView text;
 
     public static ViewPagerFragment newInstance(int number) {

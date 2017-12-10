@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import butterknife.BindView;
 import com.onemanparty.lib.dialog.delegate.ConfirmDialogFragmentDelegate;
 import com.onemanparty.rxmvpandroid.R;
 import com.onemanparty.rxmvpandroid.WeatherApplication;
@@ -19,7 +20,6 @@ import com.onemanparty.rxmvpandroid.weather.view.model.WeatherViewModel;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
 import butterknife.OnClick;
 
 public class WeatherFragment extends AbsButterLceFragment<WeatherComponent, WeatherViewModel, WeatherView.WeatherError, WeatherView> implements WeatherView {
@@ -29,10 +29,10 @@ public class WeatherFragment extends AbsButterLceFragment<WeatherComponent, Weat
     @Inject
     WeatherPresenter presenter;
 
-    @Bind(R.id.weather_tv_temp)
+    @BindView(R.id.weather_tv_temp)
     TextView currentTemperature;
 
-    @Bind(R.id.weather_btn_navigate_with_probable_show)
+    @BindView(R.id.weather_btn_navigate_with_probable_show)
     Button navigationWithDialog;
 
     ConfirmDialogFragmentDelegate<CautionDialogData> mCautionDialogDelegate;

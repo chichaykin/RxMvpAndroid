@@ -18,9 +18,4 @@ public abstract class AbsButterFragment extends AbsFragment {
         ButterKnife.bind(this, view);
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ButterKnife.unbind(this);
-    }
 }

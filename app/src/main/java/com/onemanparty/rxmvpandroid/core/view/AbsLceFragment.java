@@ -7,6 +7,7 @@ import android.view.ViewStub;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import butterknife.BindView;
 import com.onemanparty.rxmvpandroid.R;
 import com.onemanparty.rxmvpandroid.core.persistence.ComponentManagerFragment;
 import com.onemanparty.rxmvpandroid.core.persistence.HasPresenter;
@@ -16,7 +17,6 @@ import com.onemanparty.rxmvpandroid.core.view.view_model.EmptyViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
 
 /**
  * Base load - content - error view
@@ -25,22 +25,22 @@ import butterknife.Bind;
  */
 public abstract class AbsLceFragment<C extends HasPresenter, M extends EmptyViewModel, E extends Enum<E>, V extends LceView<M, E>> extends ComponentManagerFragment<C, V> implements LceView<M, E> {
 
-    @Bind(R.id.progress)
+    @BindView(R.id.progress)
     ImageView progress;
 
-    @Bind(R.id.no_connection_error_layout)
+    @BindView(R.id.no_connection_error_layout)
     View noConnection;
 
-    @Bind(R.id.retry_no_connection_button)
+    @BindView(R.id.retry_no_connection_button)
     Button noConnectionButton;
 
-    @Bind(R.id.no_loaded_error_layout)
+    @BindView(R.id.no_loaded_error_layout)
     View noData;
 
-    @Bind(R.id.retry_no_loaded_button)
+    @BindView(R.id.retry_no_loaded_button)
     Button noDataButton;
 
-    @Bind(R.id.lce_container_le)
+    @BindView(R.id.lce_container_le)
     View containerLe;
 
     protected M data;

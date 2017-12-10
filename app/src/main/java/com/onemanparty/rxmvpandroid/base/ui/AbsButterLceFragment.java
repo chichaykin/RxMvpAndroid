@@ -21,9 +21,4 @@ public abstract class AbsButterLceFragment<C extends HasPresenter, M extends Emp
         ButterKnife.bind(this, view);
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ButterKnife.unbind(this);
-    }
 }

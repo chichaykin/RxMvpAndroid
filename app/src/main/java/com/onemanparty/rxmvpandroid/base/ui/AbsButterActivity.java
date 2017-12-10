@@ -18,9 +18,4 @@ public abstract class AbsButterActivity extends AbsActivity {
         ButterKnife.bind(this);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ButterKnife.unbind(this);
-    }
 }
